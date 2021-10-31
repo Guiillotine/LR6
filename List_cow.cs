@@ -21,7 +21,7 @@ namespace LR6
             cow2.Set(food1);
             cow2.Set_udder();
             arr_cow[kolVoKorov] = cow2;
-            kolVoKorov++; //Количество коров в списке
+            kolVoKorov++;
         }
         public void Print_list()
         {

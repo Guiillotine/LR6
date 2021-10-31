@@ -10,18 +10,16 @@ namespace LR6
     {
         static void Main(string[] args)
         {
-            Food food = new Food(); List_cow list_cow1 = new List_cow();
-            List_cow list_cow2 = new List_cow();//Для стада коров
+            Food food = new Food(); List_cow list_cow1 = new List_cow(), list_cow2 = new List_cow();
             Warehouse warehouse1 = new Warehouse(), warehouse2 = new Warehouse(), warehouse3 = new Warehouse();
             Cowshed cowshed1 = new Cowshed(), cowshed2 = new Cowshed();
             int a, b, c;
-            int n1 = 0, n2 = 0;
-           
+            int n1 = 0, n2 = 0;           
 
             list_cow1.CountIllCow(ref n1); Console.Write("\n Количество больных коров в списке 1 = {0}", n1);
             list_cow1.CountMeatCow(out n2); Console.Write("\n\n Количество мясных коров в списке 1 = {0}", n2);
 
-            //food.Set("Комбикорм"); food.Set("Сено"); food.Set("Свёкла"); food.Set("Солома");
+            food.Set("Комбикорм"); food.Set("Сено"); food.Set("Свёкла"); food.Set("Солома");
             food.Set();
             for (int i = 0; i < 2; i++) list_cow1.Add(food);
             list_cow1.Print_list();
@@ -33,6 +31,7 @@ namespace LR6
             Console.Write("\n Объем вымени для коровы № 1 списка 1: " + list_cow1.VolumeUdderC(1));
             Console.ReadKey();
 
+            //Демонстрация свойств
             /*cowshed1.Length = 100; cowshed1.Width = 24; cowshed1.Height = 6;
             Console.Write("\n Параметры коровника:\n");
             cowshed1.Print();

@@ -74,7 +74,7 @@ namespace LR6
             public double width = 0.43; //ширина
             public double girth = 0.47; //обхват
             public double depth = 0.56; //глубина
-            public void set_udder(double length, double width, double girth, double depth) //Ввод параметров вымени длина, ширина, обхват, глубина 
+            public void set_udder(double length, double width, double girth, double depth)
             {
                 this.length = length;
                 this.width = width;
