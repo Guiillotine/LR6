@@ -8,12 +8,12 @@ namespace LR6
 {
     public class Cowshed
     {
-        /*public void Set(int length, int width, int height)
+        public void Set(int length, int width, int height)
         {
             this.length = length;
             this.width = width;
             this.height = height;
-        }*/
+        }
 
         public int Length
         {

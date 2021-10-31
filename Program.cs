@@ -13,11 +13,19 @@ namespace LR6
             Food food = new Food(); List_cow list_cow1 = new List_cow(), list_cow2 = new List_cow();
             Warehouse warehouse1 = new Warehouse(), warehouse2 = new Warehouse(), warehouse3 = new Warehouse();
             Cowshed cowshed1 = new Cowshed(), cowshed2 = new Cowshed();
-            int a, b, c;
-            int n1 = 0, n2 = 0;           
 
-            list_cow1.CountIllCow(ref n1); Console.Write("\n Количество больных коров в списке 1 = {0}", n1);
-            list_cow1.CountMeatCow(out n2); Console.Write("\n\n Количество мясных коров в списке 1 = {0}", n2);
+            cowshed2.Set(100, 24, 6);
+            cowshed1 = cowshed2;
+            Console.Write("\n КОРОВНИК 1:");
+            cowshed1.Print();
+            Console.Write("\n\n КОРОВНИК 2:");
+            cowshed2.Print();
+            cowshed2.Length = 150;
+            Console.Write("\n\n*Длина коровника 2 изменена*\n\n КОРОВНИК 1:");
+            cowshed1.Print();
+            Console.Write("\n\n КОРОВНИК 2:");
+            cowshed2.Print();
+
 
             food.Set("Комбикорм"); food.Set("Сено"); food.Set("Свёкла"); food.Set("Солома");
             food.Set();
@@ -31,8 +39,14 @@ namespace LR6
             Console.Write("\n Объем вымени для коровы № 1 списка 1: " + list_cow1.VolumeUdderC(1));
             Console.ReadKey();
 
+
+            //Возврат через out и ref
+            /*int n1 = 0, n2; 
+            list_cow1.CountIllCow(ref n1); Console.Write("\n Количество больных коров в списке 1 = {0}", n1);
+            list_cow1.CountMeatCow(out n2); Console.Write("\n\n Количество мясных коров в списке 1 = {0}", n2);*/
+
             //Демонстрация свойств
-            /*cowshed1.Length = 100; cowshed1.Width = 24; cowshed1.Height = 6;
+            /*int a, b, c;cowshed1.Length = 100; cowshed1.Width = 24; cowshed1.Height = 6;
             Console.Write("\n Параметры коровника:\n");
             cowshed1.Print();
             a = cowshed1.Length; b = cowshed1.Width; c = cowshed1.Height;
