@@ -44,10 +44,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="cow.cs" />
+    <Compile Include="cowshed.cs" />
     <Compile Include="food.cs" />
     <Compile Include="List_cow.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="warehouse.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

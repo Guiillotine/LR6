@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LR6
 {
-    class List_cow
+    public class List_cow
     {
         public void ArrResize() //Функция увеличения размера массива
         {

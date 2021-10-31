@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LR6
 {
-    class Food
+    public class Food
     {
         public void Set(String name)
         {
