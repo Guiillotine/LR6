@@ -51,7 +51,7 @@ namespace LR6
         public double VolumeUdderC(int n)
         {
             return (arr_cow[n-1].VolumeUdderB(n));
-        }
+            }
 
         public void CountIllCow(ref int illCow)
         {

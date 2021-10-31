@@ -30,7 +30,8 @@ namespace LR6
             food.Set("Комбикорм"); food.Set("Сено"); food.Set("Свёкла"); food.Set("Солома");
             food.Set();
             for (int i = 0; i < 2; i++) list_cow1.Add(food);
-            list_cow1.Print_list();
+                list_cow1.Print_list();
+            }
 
 
             list_cow2.Herd(6); //Создание стада на 6 коров
