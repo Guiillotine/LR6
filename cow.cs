@@ -16,7 +16,9 @@ namespace LR6
             if (weight != 0) this.weight = weight;
             if (nadoi != 0) this.nadoi = nadoi;
         }
-        public void Set(Food food1) //Функция инициализации элементов данных
+
+
+        public void Set(Food spisKorm) //Функция инициализации элементов данных
         {
             int a;
             Console.Write("\n Добавление новой коровы \n");
@@ -28,14 +30,14 @@ namespace LR6
             breed = Console.ReadLine();
 
             Console.Write("\n Выберите корм для коровы: ");
-            for (int i = 0; i < food1.Num_sp(); i++)
+            for (int i = 0; i < spisKorm.KolVoKorm_sp(); i++)
             {
-                Console.Write("\n {0} -> {1}", (i + 1), food1.Food_name(i));
+                Console.Write("\n {0} -> {1}", (i + 1), spisKorm.Food_name(i));
             }
             Console.Write("\n ");
             a = Convert.ToInt32(Console.ReadLine());
-            for (int i = 0; i < food1.Num_sp(); i++)
-                if ((i + 1) == a) food = food1.Food_name(i);
+            for (int i = 0; i < spisKorm.KolVoKorm_sp(); i++)
+                if ((i + 1) == a) food = spisKorm.Food_name(i);
 
             Console.Write("\n\n Введите возраст коровы (лет): ");
             age = Convert.ToInt32(Console.ReadLine());
@@ -58,9 +60,9 @@ namespace LR6
         {
             udder.set_udder(length, width, girth, depth);
         }
-        public double Volume_udder_b(int n)
+        public double VolumeUdderB(int n)
         {
-            return (udder.Volume_udder_a(n));
+            return (udder.VolumeUdderA(n));
         }
         public void Print_udder()
         {
@@ -87,7 +89,7 @@ namespace LR6
                 Console.Write("\n Введите обхват вымени (м): "); girth = Convert.ToDouble(Console.ReadLine());
                 Console.Write("\n Введите глубину вымени (м): "); depth = Convert.ToDouble(Console.ReadLine());
             }
-            public double Volume_udder_a(int n) //Возвращает значение объёма вымени
+            public double VolumeUdderA(int n) //Возвращает значение объёма вымени
             {
                 return (length * width * depth);
             }
