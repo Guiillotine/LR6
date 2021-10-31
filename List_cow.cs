@@ -53,7 +53,21 @@ namespace LR6
             return (arr_cow[n-1].VolumeUdderB(n));
         }
 
+        public void CountIllCow(ref int illCow)
+        {
+            illCow = 0;
+            illCow += this.illCow;
+        }
+        public void CountMeatCow(out int MeatCow)
+        {
+            MeatCow = 0;
+            MeatCow += this.MeatCow;
+        }
+
+
         private int kolVoKorov = 0;
+        private int illCow = 3;
+        private int MeatCow = 5;
         private Cow[] arr_cow = new Cow[1];
     }
 }
