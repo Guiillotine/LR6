@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace LR6
 {
-    public class Cowshed
+    public struct Cowshed
     {
-        /*public void Set(int length, int width, int height)
+        public void Set(int length, int width, int height)
         {
             this.length = length;
             this.width = width;
             this.height = height;
-        }*/
+        }
 
         public int Length
         {
@@ -38,11 +38,11 @@ namespace LR6
 
         public static Cowshed operator ++(Cowshed c1)
         {
-            return new Cowshed { length = c1.length + 1};
+            return new Cowshed { length = c1.length + 1 };
         }
 
-        private int length = 500;
-        private int width = 500;
-        private int height = 3;
+        private int length;
+        private int width;
+        private int height;
     }
 }

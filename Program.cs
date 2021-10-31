@@ -14,7 +14,20 @@ namespace LR6
             Warehouse warehouse1 = new Warehouse(), warehouse2 = new Warehouse(), warehouse3 = new Warehouse();
             Cowshed cowshed1 = new Cowshed(), cowshed2 = new Cowshed();
             int a, b, c;
-            int n1 = 0, n2 = 0;           
+            int n1 = 0, n2 = 0;
+
+            cowshed2.Set(100,24,6);
+            cowshed1 = cowshed2;
+            Console.Write("\n КОРОВНИК 1:");
+            cowshed1.Print();
+            Console.Write("\n\n КОРОВНИК 2:");
+            cowshed2.Print();
+            cowshed2.Length = 150;
+            Console.Write("\n\n*Длина коровника 2 изменена*\n\n КОРОВНИК 1:");
+            cowshed1.Print();
+            Console.Write("\n\n КОРОВНИК 2:");
+            cowshed2.Print();
+
 
             list_cow1.CountIllCow(ref n1); Console.Write("\n Количество больных коров в списке 1 = {0}", n1);
             list_cow1.CountMeatCow(out n2); Console.Write("\n\n Количество мясных коров в списке 1 = {0}", n2);
