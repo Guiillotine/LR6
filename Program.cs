@@ -13,10 +13,31 @@ namespace LR6
             Cow cow = new Cow(); Food food = new Food(); List_cow list_cow1 = new List_cow();
             List_cow list_cow2 = new List_cow();//Для стада коров
             Warehouse warehouse1 = new Warehouse(), warehouse2 = new Warehouse(), warehouse3 = new Warehouse();
+            Cowshed cowshed1 = new Cowshed(), cowshed2 = new Cowshed();
+            int a, b, c;
             cow.Set_udder(0.41, 0.42, 0.43, 0.44); //Заполнение параметров вымени внутри кода
             food.Set("Комбикорм"); food.Set("Сено"); food.Set("Свёкла"); food.Set("Солома");
 
-            Console.Write("\n\n ДОБАВЛЕНИЕ КОРМОВ НА СКЛАД 1:");
+            cowshed1.Length = 100; cowshed1.Width = 24; cowshed1.Height = 6;
+            Console.Write("\n Параметры коровника:\n");
+            cowshed1.Print();
+            a = cowshed1.Length; b = cowshed1.Width; c = cowshed1.Height;
+            Console.Write("\n\n a = {0}\n b = {1}\n c = {2}", a, b, c);
+
+
+            food.Set();
+            for (int i = 0; i < 2; i++) list_cow1.Add(food);
+            list_cow1.Print_list();
+
+
+            list_cow2.Herd(6); //Создание стада на 6 коров
+            list_cow2.Print_list();
+
+            Console.Write("\n Объем вымени для коровы № 1 списка 1: " + list_cow1.VolumeUdderC(1));
+            Console.ReadKey();
+
+            //Демонстрация перегрузки оператора '+'
+            /*Console.Write("\n\n ДОБАВЛЕНИЕ КОРМОВ НА СКЛАД 1:");
             warehouse1.AddKorm(food); warehouse1.AddKorm(food);
             Console.Write("\n\n СОДЕРЖИМОЕ СКЛАДА 1: "); warehouse1.print();
             Console.Write("\n\n ДОБАВЛЕНИЕ КОРМОВ НА СКЛАД 2:");
@@ -24,21 +45,20 @@ namespace LR6
             Console.Write("\n\n СОДЕРЖИМОЕ СКЛАДА 2: "); warehouse2.print();
             warehouse3 = warehouse1 + warehouse2;
             Console.Write("\n\n СОДЕРЖИМОЕ СКЛАДА 3:");
-            warehouse3.print();
+            warehouse3.print();*/
+
+            //Демонстрация перегрузки оператора '++'
+            /*Console.Write("\n\n Коровник 1 до префиксного инкремента: "); cowshed1.Print();
+            cowshed2 = ++cowshed1;
+            Console.Write("\n\n Коровник 1 после префиксного инкремента: "); cowshed1.Print();
+            Console.Write("\n\n Коровник 2: "); cowshed2.Print();
+
+            Console.Write("\n\n Коровник 1 до постфиксного инкремента: "); cowshed1.Print();
+            cowshed2 = cowshed1++;
+            Console.Write("\n\n Коровник 1 после постфиксного инкремента: "); cowshed1.Print();
+            Console.Write("\n\n Коровник 2: "); cowshed2.Print();*/
 
 
-            food.Set();
-            for (int i = 0; i < 3; i++)
-            {
-                list_cow1.Add(food);
-                list_cow1.Print_list();
-            }
-
-            list_cow2.Herd(6); //Создание стада на 6 коров
-            list_cow2.Print_list();
-
-            Console.Write("\n Объем вымени для коровы № 1 списка 1: " + list_cow1.VolumeUdderC(1));
-            Console.ReadKey();
         }
     }
 }
