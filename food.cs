@@ -10,8 +10,8 @@ namespace LR6
     {
         public void Set(String name)
         {
-            this.arr_food[kolVoKorm] = name;
-            this.kolVoKorm++;
+            arr_food[kolVoKorm] = name;
+            kolVoKorm++;
         }
         public void Set() //Функция инициализации элементов данных
         {
