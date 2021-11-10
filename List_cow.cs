@@ -8,7 +8,33 @@ namespace LR6
 {
     public class List_cow
     {
-        public void ArrResize() //Функция увеличения размера массива
+        public List_cow()
+        {
+            Console.Write("\n *Запуск конструктора без параметров класса List_cow*\n");
+            kolVoKorov = 0;
+            illCow = 3;
+            MeatCow = 4;
+        }
+        public List_cow(int illCow)
+        {
+            Console.Write("\n *Запуск конструктора с одним параметром класса List_cow*\n");
+            this.illCow = illCow;
+            kolVoKorov = 0;
+            MeatCow = 4;
+        }
+        public List_cow(int kolVoKorov, string name, string breed, int age, double weight, int nadoi)
+        {
+            Console.Write("\n *Запуск конструктора с шестью параметрами класса List_cow*\n");
+            this.kolVoKorov = 0;
+            for (int i = 0; i < kolVoKorov; i++)
+            {
+                Cow cow = new Cow(name, breed, age, weight, nadoi);
+            if (this.kolVoKorov > 0) this.ArrResize();
+            arr_cow[i] = cow;
+            this.kolVoKorov++;
+        }
+    }
+    public void ArrResize() //Функция увеличения размера массива
         {
             Cow[] arr_cow2 = new Cow[kolVoKorov + 1];
             for (int i = 0; i < kolVoKorov; i++) arr_cow2[i] = arr_cow[i];
@@ -29,7 +55,7 @@ namespace LR6
             {
                 Console.Write("\n № {0}", i + 1);
                 arr_cow[i].Print_cow();
-                arr_cow[i].Print_udder();
+                //arr_cow[i].Print_udder();
             }
         }
         public int KolVoKorov_sp() //Возвращает количество коров в списке
@@ -63,11 +89,14 @@ namespace LR6
             MeatCow = 0;
             MeatCow += this.MeatCow;
         }
+        public int GetIllCow()
+        {
+            return illCow;
+        }
 
-
-        private int kolVoKorov = 0;
-        private int illCow = 3;
-        private int MeatCow = 5;
+        private int kolVoKorov;
+        private int illCow;
+        private int MeatCow;
         private Cow[] arr_cow = new Cow[1];
     }
 }

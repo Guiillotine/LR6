@@ -8,6 +8,27 @@ namespace LR6
 {
     public class Cow
     {
+
+        public Cow()
+        {
+            Console.Write("\n *Запуск конструктора без параметров класса Cow*\n");
+            name = "Буренка";
+            breed = "Черно-пестрая";
+            food = "Сено";
+            age = 4;
+            weight = 400;
+            nadoi = 15;
+        }
+        public Cow(string name, string breed, int age, double weight, int nadoi)
+        {
+            Console.Write("\n *Запуск конструктора с пятью параметрами класса Cow*\n");
+            this.name = name;
+            this.breed = breed;
+            this.age = age;
+            this.weight = weight;
+            this.nadoi = nadoi;
+        }
+
         public void Set(String name, String breed, int age, double weight, int nadoi)
         {
             if (name != " ") this.name = name;
