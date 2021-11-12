@@ -120,11 +120,11 @@ namespace LR6
             }
         }
         private Udder udder = new Udder();
-        private String name = "Буренка";
-        private String breed = "Черно-пестрая"; //порода
-        private String food = "Сено";
-        private int age = 4;
-        private double weight = 400;
-        private int nadoi = 15; //Надой
+        private String name;
+        private String breed; 
+        private String food;
+        private int age;
+        private double weight;
+        private int nadoi; 
     }
 }

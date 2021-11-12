@@ -12,6 +12,17 @@ namespace LR6
         {
             KolVoCowshed++;
         }
+        public Cowshed(int[] zanyatMest)
+        {
+            Console.Write("\n *Запуск конструктора c одним параметром класса Cowshed*\n");
+            for (int i = 0; i < 10; i++) if ((zanyatMest[i] == 0) || (zanyatMest[i] == 1)) this.zanyatMest[i] = zanyatMest[i];
+            else if (zanyatMest[i] < 0) this.zanyatMest[i] = 0;
+            else if (zanyatMest[i] > 0) this.zanyatMest[i] = 1;
+            length = 500;
+            width = 500;
+            height = 3;
+            KolVoCowshed++;
+        }
         public void Set(int length, int width, int height)
         {
             this.length = length;
@@ -47,10 +58,16 @@ namespace LR6
         {
             return KolVoCowshed;
         }
+        public void PrintZanyatMest()
+        {
+            Console.Write( "\n 1 - место занято коровой\n 0 - место свободно\n Наполненность коровника следующая:\n");
+            for (int i = 0; i < 10; i++) Console.Write(" {0}", zanyatMest[i]);
+        }
         private static int KolVoCowshed = 0;
         private int length = 500;
         private int width = 500;
         private int height = 3;
+        private int[] zanyatMest = new int[10];
     }
 }
 
