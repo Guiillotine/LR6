@@ -8,7 +8,7 @@ namespace LR6
 {
     public class Food
     {
-        public void Set(String name)
+        public void Add(String name)
         {
             arr_food[kolVoKorm] = name;
             kolVoKorm++;

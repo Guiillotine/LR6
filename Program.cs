@@ -10,13 +10,9 @@ namespace LR6
     {
         static void Main(string[] args)
         {
-            int[] a = new int[10];
-            for (int i = 0; i < 10; i++)
-            {
-                Console.Write("\n Место № {0}\n Введите 1, чтобы обозначить, что место занято коровой\n 0 - если место свободно : ", i + 1); a[i] = Convert.ToInt32(Console.ReadLine());
-            }
-            Cowshed cowshed = new Cowshed(a);
-            cowshed.PrintZanyatMest();
+            List_cow list_cow = new List_cow(); Food food = new Food();
+            food.Add("Силос"); food.Add("Комбикорм"); food.Add("Солома"); food.Add("Свёкла");
+            list_cow.Add(food);
             Console.ReadKey();
         }
     }

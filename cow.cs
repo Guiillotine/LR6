@@ -61,7 +61,19 @@ namespace LR6
                 if ((i + 1) == a) food = spisKorm.Food_name(i);
 
             Console.Write("\n\n Введите возраст коровы (лет): ");
-            age = Convert.ToInt32(Console.ReadLine());
+            try
+            {
+                age = Convert.ToInt32(Console.ReadLine());
+                if (age < 0) throw new Exception("\n Ошибка. Возраст коровы не может быть меньше нуля\n");
+            }
+            catch (FormatException)
+            {
+                Console.Write("\n Ошибка.  Введены текстовые данные вместо числовых\n"); return;
+            }
+            catch (Exception)
+            {
+                Console.Write("\n Ошибка. Возраст коровы не может быть меньше нуля\n"); ; return;
+            }
 
             Console.Write("\n Введите вес коровы (кг): ");
             weight = Convert.ToDouble(Console.ReadLine());

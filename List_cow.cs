@@ -45,7 +45,7 @@ namespace LR6
             if (kolVoKorov > 0) this.ArrResize();
             Cow cow2 = new Cow();
             cow2.Set(food1);
-            cow2.Set_udder();
+           //cow2.Set_udder();
             arr_cow[kolVoKorov] = cow2;
             kolVoKorov++;
         }
