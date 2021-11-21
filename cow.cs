@@ -11,7 +11,6 @@ namespace LR6
 
         public Cow()
         {
-            Console.Write("\n *Запуск конструктора без параметров класса Cow*\n");
             name = "Буренка";
             breed = "Черно-пестрая";
             food = "Сено";
@@ -21,7 +20,6 @@ namespace LR6
         }
         public Cow(string name, string breed, int age, double weight, int nadoi)
         {
-            Console.Write("\n *Запуск конструктора с пятью параметрами класса Cow*\n");
             this.name = name;
             this.breed = breed;
             this.age = age;
@@ -37,7 +35,6 @@ namespace LR6
             if (weight != 0) this.weight = weight;
             if (nadoi != 0) this.nadoi = nadoi;
         }
-
 
         public void Set(Food spisKorm) //Функция инициализации элементов данных
         {
@@ -100,6 +97,10 @@ namespace LR6
         public void Print_udder()
         {
             udder.Print_udder();
+        }
+        public string GetName()
+        {
+            return name;
         }
         private class Udder
         {

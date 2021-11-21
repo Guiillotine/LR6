@@ -10,21 +10,25 @@ namespace LR6
     {
         public List_cow()
         {
-            Console.Write("\n *Запуск конструктора без параметров класса List_cow*\n");
             kolVoKorov = 0;
             illCow = 3;
             MeatCow = 4;
+            Cow cow = new Cow();
+            for (int i = 0; i < 3; i++)
+                for (int j = 0; j < 5; j++)
+                {
+                    cow.Set("0", "0", 0, 0, 0);
+                    arr_Korovnik[i,j] = cow;
+                }
         }
         public List_cow(int illCow)
         {
-            Console.Write("\n *Запуск конструктора с одним параметром класса List_cow*\n");
             this.illCow = illCow;
             kolVoKorov = 0;
             MeatCow = 4;
         }
         public List_cow(int kolVoKorov, string name, string breed, int age, double weight, int nadoi)
         {
-            Console.Write("\n *Запуск конструктора с шестью параметрами класса List_cow*\n");
             this.kolVoKorov = 0;
             for (int i = 0; i < kolVoKorov; i++)
             {
@@ -43,11 +47,38 @@ namespace LR6
         public void Add(Food food1) //Функция инициализации элементов данных
         {
             if (kolVoKorov > 0) this.ArrResize();
-            Cow cow2 = new Cow();
-            cow2.Set(food1);
+            Cow cow = new Cow();
+            cow.Set(food1);
            //cow2.Set_udder();
-            arr_cow[kolVoKorov] = cow2;
+            arr_cow[kolVoKorov] = cow;
+            int x, y;
+            Console.Write("\n Введите номер ряда стоила коровы: "); x = Convert.ToInt32(Console.ReadLine());
+            Console.Write("\n Введите номер места стоила коровы: "); y = Convert.ToInt32(Console.ReadLine());
+            x = x - 1;
+            y = y - 1;
+            arr_Korovnik[x,y] = cow;
             kolVoKorov++;
+        }
+        public void PrintArrKorovnik()
+        {
+            Console.Write("\n     План расположения коров в стойлах:\n _________________________________________\n");
+            for (int i = 0; i < 3; i++)
+            {
+                for (int j = 0; j < 5; j++)
+                {
+                    Console.Write(" | ");
+                    if (arr_Korovnik[i,j].GetName() == "0") Console.Write(" --- ");
+                    else Console.Write("{0}",arr_Korovnik[i,j].GetName());
+                }
+                Console.Write(" |\n");
+            }
+            Console.Write(" _________________________________________\n");
+        }
+        public Cow GetCow(int x, int y)
+        {
+            x = x - 1;
+            y = y - 1;
+            return arr_Korovnik[x,y];
         }
         public void Print_list()
         {
@@ -77,7 +108,7 @@ namespace LR6
         public double VolumeUdderC(int n)
         {
             return (arr_cow[n-1].VolumeUdderB(n));
-            }
+        }
 
         public void CountIllCow(ref int illCow)
         {
@@ -97,6 +128,7 @@ namespace LR6
         private int kolVoKorov;
         private int illCow;
         private int MeatCow;
+        private Cow[,] arr_Korovnik = new Cow[3,5];
         private Cow[] arr_cow = new Cow[1];
     }
 }
