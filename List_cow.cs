@@ -51,12 +51,12 @@ namespace LR6
             cow.Set(food1);
            //cow2.Set_udder();
             arr_cow[kolVoKorov] = cow;
-            int x, y;
+            /*int x, y;
             Console.Write("\n Введите номер ряда стоила коровы: "); x = Convert.ToInt32(Console.ReadLine());
             Console.Write("\n Введите номер места стоила коровы: "); y = Convert.ToInt32(Console.ReadLine());
             x = x - 1;
             y = y - 1;
-            arr_Korovnik[x,y] = cow;
+            arr_Korovnik[x,y] = cow;*/
             kolVoKorov++;
         }
         public void PrintArrKorovnik()
