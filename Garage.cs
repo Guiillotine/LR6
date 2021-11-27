@@ -16,6 +16,12 @@ namespace LR6
 		{
 			this.kolVoCars = kolVoCars;
 		}
+		public override string ToString()
+		{
+			string s = "";
+			s += " Длина: " + Convert.ToString(length) + " Ширина: " + Convert.ToString(width) + " Высота: " + Convert.ToString(height) + " Кол.Этажей: " + Convert.ToString(kolVoFloor) + " Кол.Машиномест: " + Convert.ToString(kolVoCars);
+			return s;
+		}
 		public void Set(int length, int width, int height, int kolVoFloor, int kolVoCars)
 		{
 			base.Set(length, width, height, kolVoFloor);

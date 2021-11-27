@@ -22,6 +22,13 @@ namespace LR6
 			this.height = height;
 			this.kolVoFloor = kolVoFloor;
 		}
+		public override string ToString()
+		{
+			string s = "";
+			s += " Длина: " + Convert.ToString(length) + " Ширина: " + Convert.ToString(width) + " Высота: " + Convert.ToString(height) + " Кол.Этажей: " + Convert.ToString(kolVoFloor);
+			return s;
+		}
+
 		public void Set(int length, int width, int height, int kolVoFloor)
 		{
 			this.length = length;

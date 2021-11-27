@@ -10,12 +10,16 @@ namespace LR6
     {
         static void Main(string[] args)
         {
-            Building building = new Building();
-            Garage garage = new Garage();
-            building.Set(60, 15, 8, 2);
-            garage.Set(20, 10, 4, 1, 25);
-            building.Print();
-            garage.Print();
+            Building building = new Building(60, 15, 8, 2);
+            Garage garage = new Garage(20, 10, 4, 1, 25);
+            Console.Write("\n");
+            Console.WriteLine(building);
+            Console.Write("\n");
+            Console.WriteLine(garage);
+            //building.Print();
+            //Console.Write("\n");
+            Console.Write("\n");
+            Console.ReadKey();
         }
     }
 }
