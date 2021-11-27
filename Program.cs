@@ -10,13 +10,12 @@ namespace LR6
     {
         static void Main(string[] args)
         {
-            List_cow list_cow = new List_cow(); Food food = new Food();
-            food.Add("Силос"); food.Add("Комбикорм"); food.Add("Солома"); food.Add("Свёкла");
-            for (int i = 0; i < 2; i++) list_cow.Add(food);
-            list_cow.PrintArrKorovnik();
-            Console.Write("\n Информация о корове, находящейся в стоиле во 2 ряду на 3 месте:\n");
-            list_cow.GetCow(2, 3).Print_cow();
-            Console.ReadKey();
+            Building building = new Building();
+            Garage garage = new Garage();
+            building.Set(60, 15, 8, 2);
+            garage.Set(20, 10, 4, 1, 25);
+            building.Print();
+            garage.Print();
         }
     }
 }
