@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LR6
 {
-    abstract class Worker
+    class Worker : IWorker
     {
 		public Worker()
 		{
@@ -23,7 +23,10 @@ namespace LR6
 		{
 			Console.Write("\n Имя: {0}\n Фамилия: {1}\n Возраст: {2}\n Пол: {3}\n Оклад: {4}", name, surname, age, sex, oklad);
 		}
-		public abstract int ZarPlat();
+		public int ZarPlat()
+        {
+			return oklad;
+        }
 
 		protected String name;
 		protected String surname;

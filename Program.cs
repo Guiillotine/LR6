@@ -10,7 +10,12 @@ namespace LR6
     {
         static void Main(string[] args)
         {
+            Worker watchman = new Worker("Петров", "Пётр", 50, 'М', 25000);
             Cleaner cleaner = new Cleaner("Иванов", "Иван", 60, 'М', 20000);
+            Console.Write("\n\n Зарплата сторожа: {0} р.",  watchman.ZarPlat());
+            Console.Write("\n\n Зарплата уборщика: {0} р.", cleaner.ZarPlat());
+
+            /*Cleaner cleaner = new Cleaner("Иванов", "Иван", 60, 'М', 20000);
             cleaner.Print();
             Console.Write("\n\n Зарплата уборщика: {0} р.\n\n", cleaner.ZarPlat());
 
@@ -22,7 +27,7 @@ namespace LR6
             director.Print();
             Console.Write("\n\n Зарплата директора: {0} р.\n\n", director.ZarPlat());
 
-            Console.Write("\n");
+            Console.Write("\n");*/
             Console.ReadKey();
         }
     }

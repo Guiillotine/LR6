@@ -51,6 +51,7 @@
     <Compile Include="cowshed.cs" />
     <Compile Include="food.cs" />
     <Compile Include="Garage.cs" />
+    <Compile Include="IWorker.cs" />
     <Compile Include="List_cow.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

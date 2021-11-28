@@ -19,7 +19,7 @@ namespace LR6
 		{
 			Console.Write("\n Имя: {0}\n Фамилия: {1}\n Возраст: {2}\n Пол: {3}\n Оклад: {4}\n Районный коэффициент: {5}\n Премия: {6}\n Поощерительные по результатам работы: {7}", name, surname, age, sex, oklad, rayKoef, prem, pooscher);
 		}
-		public override int ZarPlat()
+		public int ZarPlat()
 		{
 			return (oklad + oklad * rayKoef / 100 + oklad * prem / 100 + oklad * pooscher / 100);
 		}
