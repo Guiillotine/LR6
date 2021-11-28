@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LR6
 {
-	class Garage : Building
+	class Garage : Building, ICloneable  
 	{
 		public Garage()
 		{
@@ -16,6 +16,11 @@ namespace LR6
 		{
 			this.kolVoCars = kolVoCars;
 		}
+		public object Clone()
+		{
+			return new Garage(length, width, height, kolVoFloor, kolVoCars);
+		}
+
 		public override string ToString()
 		{
 			string s = "";

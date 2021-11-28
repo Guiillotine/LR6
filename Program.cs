@@ -10,10 +10,17 @@ namespace LR6
     {
         static void Main(string[] args)
         {
-            Worker watchman = new Worker("Петров", "Пётр", 50, 'М', 25000);
-            Cleaner cleaner = new Cleaner("Иванов", "Иван", 60, 'М', 20000);
-            Console.Write("\n\n Зарплата сторожа: {0} р.",  watchman.ZarPlat());
-            Console.Write("\n\n Зарплата уборщика: {0} р.", cleaner.ZarPlat());
+            Food food = new Food();
+            food.Add("Силос"); food.Add("Комбикорм"); food.Add("Солома"); food.Add("Свёкла");
+            Garage a = new Garage(20, 10, 4, 1, 25);
+            Garage b = new Garage(15, 15, 4, 1, 20);
+            Console.Write("\n\n ГАРАЖ 1:"); a.Print();
+            Console.Write("\n\n ГАРАЖ 2:"); b.Print();
+            b = (Garage)a.Clone();
+            b.Set(19, 9, 4, 1, 25);
+            Console.Write("\n\n\n ГАРАЖ 1:"); a.Print();
+            Console.Write("\n\n ГАРАЖ 2:"); b.Print();
+
 
             /*Cleaner cleaner = new Cleaner("Иванов", "Иван", 60, 'М', 20000);
             cleaner.Print();
