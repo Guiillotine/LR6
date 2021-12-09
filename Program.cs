@@ -17,7 +17,7 @@ namespace LR6
             worker1.Print(); Console.Write("\n");
             Worker worker2 = new Worker("Бучнев", "Алексей", 42, 'М', 20000);
             Console.Write("\n РАБОТНИК 2:\n");
-            worker1.Print(); Console.Write("\n"); 
+            worker2.Print(); Console.Write("\n"); 
 
             Compare<Worker> A = new Compare<Worker>();
             Console.Write("\n Работник с большим окладом:\n");
@@ -26,7 +26,7 @@ namespace LR6
             if (A.Min(worker1, worker2)) worker1.Print(); else worker2.Print();
 
             Director director1 = new Director("Борисов", "Борис", 65, 'М', 90000, 40);
-            Console.Write("\n ДИРЕКТОР ПРЕДПРИЯТИЯ 1:\n"); director1.Print(); Console.Write("\n");
+            Console.Write("\n\n ДИРЕКТОР ПРЕДПРИЯТИЯ 1:\n"); director1.Print(); Console.Write("\n");
             Director director2 = new Director("Сидоров", "Сергей", 40, 'М', 60000, 20);
             Console.Write("\n ДИРЕКТОР ПРЕДПРИЯТИЯ 2:\n"); director2.Print(); Console.Write("\n");
 

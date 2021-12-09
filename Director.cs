@@ -17,7 +17,7 @@ namespace LR6
 		}
 		public void Print()
 		{
-			Console.Write("\n Имя: {0}\n Фамилия: {1}\n Возраст: {2}\n Пол: {3}\n Оклад: {4}\n Районный коэффициент: {5}\n Премия: {6}\n Поощерительные по результатам работы: {7}", name, surname, age, sex, oklad, rayKoef, prem, pooscher);
+			Console.Write("\n Имя: {0}\n Фамилия: {1}\n Возраст: {2}\n Пол: {3}\n Оклад: {4}\n Поощерительные по результатам работы: {5}", name, surname, age, sex, oklad, pooscher);//Console.Write("\n Имя: {0}\n Фамилия: {1}\n Возраст: {2}\n Пол: {3}\n Оклад: {4}\n Районный коэффициент: {5}\n Премия: {6}\n Поощерительные по результатам работы: {7}", name, surname, age, sex, oklad, rayKoef, prem, pooscher);
 		}
 		public int ZarPlat()
 		{
