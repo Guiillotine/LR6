@@ -27,7 +27,16 @@ namespace LR6
         {
 			return oklad;
         }
-
+		public static bool operator >(Worker a, Worker b)
+		{
+			if (a.oklad > b.oklad) return (true);
+			else return (false);
+		}
+		public static bool operator <(Worker a, Worker b)
+		{
+			if (a.oklad < b.oklad) return (true);
+			else return (false);
+		}
 		protected String name;
 		protected String surname;
 		protected int age;

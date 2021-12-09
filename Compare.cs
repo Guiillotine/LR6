@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LR6
 {
-	class Compare<T> where T : Cleaner  //IComparable<T> //public class TemplateTest<T> where T : int
+	class Compare<T> where T : Worker  //IComparable<T> //public class TemplateTest<T> where T : int
 	{
 	public Compare()
 		{
