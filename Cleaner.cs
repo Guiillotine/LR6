@@ -22,7 +22,6 @@ namespace LR6
 		{
 			return (oklad + oklad * rayKoef / 100 + oklad * prem / 100);
 		}
-
 		private int rayKoef = 15;
 		private int prem = 20;
 	}

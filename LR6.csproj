@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="Building.cs" />
     <Compile Include="Admin.cs" />
+    <Compile Include="Compare.cs" />
     <Compile Include="Director.cs" />
     <Compile Include="Cleaner.cs" />
     <Compile Include="cow.cs" />
