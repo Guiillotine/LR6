@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LR6
 {
-	class Compare<T> where T : Worker  //IComparable<T> //public class TemplateTest<T> where T : int
+	class Compare<T> where T : Worker
 	{
 	public Compare()
 		{
@@ -19,8 +19,8 @@ namespace LR6
 		}
 	public bool Min(T a, T b)
 		{
-			/*if (a.CompareTo(b) < 0) return (true);
-			else*/ return (false);
+			if (a < b) return (true);
+			else return (false);
 		}
 	}
 }

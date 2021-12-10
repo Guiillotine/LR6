@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LR6
 {
-    class Worker : IWorker
+    public class Worker : IWorker
     {
 		public Worker()
 		{
@@ -27,6 +27,10 @@ namespace LR6
         {
 			return oklad;
         }
+		public void PrintZarPlat()
+		{
+			Console.Write("\n Зарплата работника составляет: {0} р.", ZarPlat());
+		}
 		public static bool operator >(Worker a, Worker b)
 		{
 			if (a.oklad > b.oklad) return (true);
@@ -43,4 +47,5 @@ namespace LR6
 		protected char sex;
 		protected int oklad;
 	}
+	//public delegate int DelegZarpl(Worker worker);
 }

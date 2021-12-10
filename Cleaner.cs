@@ -22,6 +22,10 @@ namespace LR6
 		{
 			return (oklad + oklad * rayKoef / 100 + oklad * prem / 100);
 		}
+		public void PrintZarPlat()
+		{
+			Console.Write("\n Зарплата уборщика составляет: {0} р.", ZarPlat());
+		}
 		private int rayKoef = 15;
 		private int prem = 20;
 	}
