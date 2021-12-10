@@ -44,6 +44,14 @@ namespace LR6
 		{
 			return length * width;
 		}
+		public int GetLength()
+		{
+			return length;
+		}
+		public int GetWidth()
+		{
+			return width;
+		}
 		protected int length;
 		protected int width;
 		protected int height;

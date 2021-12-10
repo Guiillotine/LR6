@@ -34,7 +34,7 @@ namespace LR6
 		}
 		public void Print()
 		{
-			Console.Write("\n Длина здания: {0}\n Ширина здания: {1}\n Высота здания: {2}\n Количество этажей: {3}\n Количество машиномест: {4}", length, width, height, kolVoFloor, kolVoCars);
+			Console.Write("\n Длина гаража: {0}\n Ширина гаража: {1}\n Высота гаража: {2}\n Количество этажей: {3}\n Количество машиномест: {4}", length, width, height, kolVoFloor, kolVoCars);
 		}
 		private int kolVoCars;
 	}
