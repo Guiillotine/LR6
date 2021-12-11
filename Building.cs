@@ -52,6 +52,10 @@ namespace NongenericCollections
 			{
 				return width;
 			}
+			public int Getheight()
+			{
+				return height;
+			}
 			public int Compare(Object o1, Object o2)  // сравнение 2 объектов
 			{
 				Building a = (Building)o1;

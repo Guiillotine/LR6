@@ -8,6 +8,15 @@ namespace NongenericCollections
     {
         class Program
         {
+            public static int findUsingIterator(int it, ArrayList BuildingList)
+            {
+                for (; it < BuildingList.Count; it++)
+                {
+                    Building tmp = (Building)BuildingList[it];
+                    if (tmp.Getheight() >= 3 && tmp.Getheight() <= 6) return it;
+                }
+                return -1;
+            }
             static void Main(string[] args)
             {
                 Garage garage1 = new Garage(15, 15, 2, 1, 10), garage2 = new Garage(20, 25,3, 1, 20), garage3 = new Garage(20, 15, 3, 1, 15);
@@ -17,17 +26,23 @@ namespace NongenericCollections
                 BuildingList.Add(garage1); BuildingList.Add(building1);
                 BuildingList.Add(garage2); BuildingList.Add(building2);
                 BuildingList.Add(garage3);
-                Console.Write("\n СОРТИРОВКА ЗДАНИЙ ПО ВОЗРАСТАНИЮ ПЛОЩАДИ\n\n СПИСОК ЗДАНИЙ ДО СОРТИРОВКИ:\n");
+                Console.Write("\n ПОИСК ЗДАНИЙ С ВЫСОТОЙ ОТ 3 ДО 6 М.\n\n ПОЛНЫЙ СПИСОК ЗДАНИЙ:\n");
                 foreach (Building k in BuildingList)
                 {
                     k.Print(); Console.Write("\n");
                 }
-                IComparer Comp = new Building();
-                BuildingList.Sort(Comp);
-                Console.Write("\n СПИСОК ЗДАНИЙ ПОСЛЕ СОРТИРОВКИ:\n");
-                foreach (Building k in BuildingList)
+
+                Console.Write("\n ПО ЗАПРОСУ НАЙДЕНО:\n");
+                for (int i = 0; i < BuildingList.Count; i++)
                 {
-                    k.Print(); Console.Write("\n");
+                    int a;
+                    a = findUsingIterator(i, BuildingList);
+                    if (a != -1)
+                    {
+                        Building tmp = (Building)BuildingList[a];
+                        tmp.Print(); Console.Write("\n");
+                        i = a;
+                    }
                 }
 
                 Console.ReadKey();
